@@ -38,7 +38,7 @@ var addItem = document.getElementsByClassName('title')[0];
 addItem.style.fontWeight = 'bold';
 addItem.style.color = 'green';
 
-var items = document.getElementsByClassName('list-group-item');
+var items = document.getElementsByTagName('li');
 items[2].style.backgroundColor = 'green';
 items[2].style.fontWeight = 'bold';
 items[0].style.fontWeight = 'bold';
@@ -59,6 +59,17 @@ var li = document.getElementsByTagName('li');
 li[4].style.backgroundColor = 'green';
 li[4].style.color = 'blue';
 li[4].style.fontWeight = 'bold';
+
+var itemList = document.querySelectorAll("#items li");
+  itemList[1].style.color = "green";
+  itemList[1].style.backgroundColor = 'green';
+  itemList[2].style.visibility = "hidden";
+  
+var oddItems = document.querySelectorAll("#items li:nth-child(odd)");
+for (var i = 0; i < oddItems.length; i++) {
+  oddItems[i].style.backgroundColor = "green";
+}
+
 
 </script>
 </body>
