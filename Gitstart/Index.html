@@ -41,13 +41,25 @@ addItem.style.color = 'green';
 var items = document.getElementsByClassName('list-group-item');
 items[2].style.backgroundColor = 'green';
 items[2].style.fontWeight = 'bold';
-items[2].style.color = 'blue';
 items[0].style.fontWeight = 'bold';
-items[0].style.color = 'blue';
 items[1].style.fontWeight = 'bold';
-items[1].style.color = 'blue';
 items[3].style.fontWeight = 'bold';
-items[3].style.color = 'blue';
+
+for (let i=0; i<items.length; i++){
+    items[i].style.color = 'red';
+    items[i].style.fontWeight = 'bold';
+}
+
+var newItem = document.createElement("li");
+newItem.textContent = "Item 5";
+var itemList = document.getElementById("items");
+itemList.appendChild(newItem);
+
+var li = document.getElementsByTagName('li');
+li[4].style.backgroundColor = 'green';
+li[4].style.color = 'blue';
+li[4].style.fontWeight = 'bold';
+
 </script>
 </body>
 </html>
