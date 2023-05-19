@@ -70,6 +70,29 @@ for (var i = 0; i < oddItems.length; i++) {
   oddItems[i].style.backgroundColor = "green";
 }
 
+var itemlist = document.querySelector('#items');
+console.log(itemlist.parentNode);
+itemlist.parentElement.style.backgroundColor = 'skyblue';
+itemlist.children[1].style.backgroundColor = 'yellow';
+itemlist.lastElementChild.textContent = 'Hi There';
+
+console.log(itemlist.nextElementSibling);
+
+itemlist.previousElementSibling.style.color = 'green';
+
+var newDiv = document.createElement('div');
+newDiv.className = 'class';
+newDiv.id = 'hello';
+newDiv.setAttribute('title', 'Hello Div');
+
+var newDivText = document.createTextNode('Hello World');
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv, h1);
+newDiv.style.fontSize = '40px';
 
 </script>
 </body>
